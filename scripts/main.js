@@ -207,9 +207,6 @@ window.onload = function () {
                     user = userArr[i];
                 }
             }
-            console.log(user)
-            console.log(inputUserName.value)
-            console.log(inputPass.value)
 
             if (user === null) {
                 inputUserName.classList.add("error");
