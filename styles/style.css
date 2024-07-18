@@ -1,0 +1,226 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+fieldset {
+    border: none;
+}
+
+@font-face {
+    font-family: NunitoBold, sans-serif;
+    src: url("../assets/fonts/Nunito-Bold.woff2") format("woff2");
+}
+
+:root {
+    --main-background-one: #FFFFFB;
+    --main-background-two: #F8F8FA;
+    --container-border-color: #E6C061;
+    --button-background: #DD3142;
+    --button-background-hover: #bd1a2a;
+    --text-black: #000000;
+    --text-dark-gray: #636363;
+    --text-light-gray: #C6C6C4;
+    --text-wet-asphalt: #323232;
+    --text-white: #FFFFFF;
+    --modal-background: #1d1b1b;
+}
+
+body {
+    font-family: NunitoBold, sans-serif;
+}
+
+.registration-form {
+    position: relative;
+    background: linear-gradient(to right, var(--main-background-one) 50%, var(--main-background-two) 50%);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+    /*border-left: 3px solid var(--container-border-color);*/
+    /*border-right: 3px solid var(--container-border-color);*/
+}
+
+.logo {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.form {
+    width: 50%;
+    padding: 190px 60px;
+}
+
+.form-title {
+    font-size: 36px;
+    padding-bottom: 20px;
+}
+
+.form-desc {
+    font-size: 22px;
+    line-height: 27px;
+    color: var(--text-dark-gray);
+    padding-bottom: 72px;
+}
+
+.form-input {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 25px;
+}
+
+.input-desc {
+    font-size: 16px;
+    color: var(--text-light-gray);
+}
+
+.input {
+    border: none;
+    border-bottom: 1px solid var(--text-light-gray);
+    outline: none;
+    height: 44px;
+    font-size: 20px;
+    color: var(--text-wet-asphalt);
+}
+
+.form-check {
+    padding-top: 10px;
+    padding-bottom: 40px;
+}
+
+.form-check-wrap {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.check-desc {
+    font-size: 16px;
+    color: var(--text-dark-gray);
+}
+
+.form-submit {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    width: 210px;
+    height: 70px;
+    border: none;
+    border-radius: 40px;
+    background: var(--button-background);
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-white);
+    margin-bottom: 44px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.btn:hover {
+    background: var(--button-background-hover);
+}
+
+.have-account {
+    text-decoration: none;
+    font-size: 16px;
+    color: var(--text-dark-gray);
+    transition: .3s;
+}
+
+.have-account:hover {
+    color: var(--text-wet-asphalt);
+}
+
+.form-image {
+    width: 50%;
+    padding-bottom: 35px;
+}
+
+.form-image img {
+    max-width: 100%;
+}
+
+/*Модальное окно*/
+.modal-window {
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    transition: .5s;
+}
+
+.modal {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    max-width: 850px;
+    border-radius: 20px;
+    background: var(--text-black);
+    opacity: 1;
+    margin: 20px;
+    padding: 20px;
+    transform: scale(0);
+    transition: .3s;
+}
+
+.modal-message {
+    font-size: 20px;
+    color: var(--text-white);
+}
+
+.modal-btn {
+    justify-self: end;
+    align-self: end;
+    width: 100px;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    background: var(--button-background);
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-white);
+    cursor: pointer;
+    transition: .3s;
+}
+
+.modal-btn:hover {
+    background: var(--button-background-hover);
+}
+
+.modal-window.open {
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal-window.open .modal {
+    transform: scale(1);
+}
+
+/*Стили для валидации*/
+.error {
+    border-bottom: 1px solid var(--button-background);
+}
+
+.text-error {
+    font-family: NunitoBold, sans-serif;
+    font-size: 12px;
+    color: var(--button-background);
+    margin: 5px 0 5px 0;
+}

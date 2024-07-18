@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>User registration page</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/adaptive.css">
+</head>
+<body>
+
+<section class="registration-form">
+  <div class="container">
+    <figure class="logo">
+      <img src="assets/images/homeWorks.svg" alt="Logo">
+    </figure>
+    <form action="https://webhook.site/5f424915-d7fa-4982-b817-3d67aa72bbec" method="post" id="form" class="form">
+      <h1 class="form-title">Get your free account</h1>
+      <p class="form-desc">
+        Try homeWorks BUSINESS free for 15 days. Downgrade to Basic (Free Forever) anytime.
+      </p>
+      <fieldset id="form-input-full-name" class="form-input">
+        <label class="input-desc" for="fullName">Full Name</label>
+        <input class="input" type="text" id="fullName" name="fullName">
+      </fieldset>
+      <fieldset class="form-input">
+        <label class="input-desc" for="username">Your username</label>
+        <input class="input" type="text" id="username" name="username">
+      </fieldset>
+      <fieldset id="form-input-email" class="form-input">
+        <label id="input-email" class="input-desc" for="email">E-mail</label>
+        <input class="input" type="email" id="email" name="email">
+      </fieldset>
+      <fieldset class="form-input">
+        <label class="input-desc" for="password">Password</label>
+        <input data-min-length="8" class="input" type="password" id="password" name="password">
+      </fieldset>
+      <fieldset id="form-input-repeat-pass" class="form-input">
+        <label class="input-desc" for="repeatPassword">Repeat Password</label>
+        <input class="input" type="password" id="repeatPassword" name="repeatPassword">
+      </fieldset>
+      <fieldset class="form-check">
+        <div class="form-check-wrap">
+          <input type="checkbox" id="check" name="check">
+          <label class="check-desc" for="check">Agree to our Terms of Service and Privacy Statement</label>
+        </div>
+      </fieldset>
+      <div class="form-submit">
+        <button id="btn" class="btn" type="submit">Sign Up</button>
+        <a href="#" id="link-account" class="have-account">Already have an account?</a>
+      </div>
+    </form>
+    <figure class="form-image">
+      <img src="assets/images/image.png" alt="Form image">
+    </figure>
+  </div>
+  <div id="modal" class="modal-window">
+    <div class="modal">
+      <p class="modal-message">
+        На вашу почту отправлена ссылка, перейдите по ней, чтобы завершить регистрацию!
+      </p>
+      <button id="modal-btn" class="modal-btn">OK</button>
+    </div>
+  </div>
+</section>
+
+<script src="scripts/main.js"></script>
+</body>
+</html>
